@@ -1,0 +1,11 @@
+{% extends 'expform/base.html' %}
+{% block content %}
+    {% for spend in spend_list %}
+        <tr>
+            <td width="300"><a href="{% url 'exp_detail' pk=spend.pk %}">{{ spend.created_data }}</a></td>
+            <td>{{ spend.customer }}</td>
+            <td>{{ spend.millage }}</td>
+            <td>&pound; {{ spend.cost }}</td>
+        </tr>
+    {% endfor %}
+{% endblock %}

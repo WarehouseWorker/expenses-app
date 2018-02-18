@@ -1,0 +1,10 @@
+{% extends 'expform/base.html' %}
+
+{% block content %}
+    <div class="post">
+        <h3>Customer name or type of cost: {{ spend.customer }}</h3>
+        <p>Millage: {{ spend.millage }}</p>
+        <p>Date: {{ spend.created_data }}</p>
+        <p>Cost: &pound; {{ spend.cost }}</p>
+    </div>
+{% endblock %}
